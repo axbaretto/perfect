@@ -1,6 +1,4 @@
-// Perfect minimal hashing
-// Core algorithm based on http://stevehanov.ca/blog/index.php?id=119
-
+// Forked from github.com/mixu by Mikito Takada <mikito.takada@gmail.com>
 // Calculates a distinct hash function for a given string. Each value of the
 // integer d results in a different hash value.
 function hash( d, str) {
@@ -99,4 +97,3 @@ exports.lookup = function(G, V, key) {
   if (d < 0) return V[ 0-d-1 ];
   return V[hash(d, key) % V.length];
 };
-
